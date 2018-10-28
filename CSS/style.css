@@ -1,0 +1,91 @@
+div {
+	width: 90%;
+	height: 100px;
+	margin: 0 auto;
+}
+
+ul {
+	list-style: none;
+	margin: 10% auto;
+	height: 100;
+	width: 100;
+} 
+
+ul li {
+	display: inline;
+	float: left;
+	text-transform: uppercase;
+	font-size: 30px;
+	margin: 5%;
+	background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.one{
+	animation-duration:4s;
+	animation-name: one;
+	}
+
+.two {
+	animation-duration:4s;
+	animation-name: two;
+	-webkit-backface-visibility: visible;
+  	backface-visibility: visible;
+}	
+
+.tree {
+  	-webkit-animation-name: tree;
+  	animation-name: tree;
+	animation-duration:4s;
+}	
+
+@keyframes one {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+  
+@keyframes two {
+  from {
+    -webkit-transform: rotateY(-360deg);
+    transform: perspective(400px) rotateY(0deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  
+  to {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    transform: perspective(400px)  rotateY(360deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes tree {
+ from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, -200deg);
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+
